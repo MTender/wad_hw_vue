@@ -54,7 +54,7 @@ body {
     background-color: rgb(245, 245, 245);
     width: 50%;
     min-width: 300px;
-    height: 100%;
+    height: 99%;
     margin: 0 auto;
     padding: 3%;
     padding-top: 50px;
