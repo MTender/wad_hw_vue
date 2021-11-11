@@ -54,6 +54,7 @@ export default {
 		justify-content: space-between;
 
 		.logo {
+			min-width: 300px;
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: space-between;
@@ -102,10 +103,6 @@ export default {
 			}
 		}
 
-		> div {
-			min-width: 300px;
-		}
-
 		.profile-picture {
 			img {
 				width: 32px;
@@ -119,6 +116,16 @@ export default {
 
 			> a {
 				float: right;
+			}
+		}
+
+		@media screen and (max-width: 1300px) {
+			.search {
+				display: none;
+			}
+
+			.profile-picture {
+				min-width: 50px;
 			}
 		}
 	}
