@@ -138,6 +138,11 @@ export default new Vuex.Store({
             state.posts.forEach((post) => {
                 post.like += 1;
             });
+        },
+        ResetLikes: (state) => {
+            state.posts.forEach((post) => {
+                post.like = 0;
+            });
         }
     },
     actions: {},
