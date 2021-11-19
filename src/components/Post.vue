@@ -20,7 +20,10 @@
 		</div>
 		<div class="post-footer">
 			<div class="like-button">
-				<a href="#"><img src="../assets/like.png" alt="like" /></a>
+				<button v-on:click="IncreaseLikes"><img src="../assets/like.png" alt="like" /></button>
+			</div>
+			<div class="like-number">
+				<p>Likes: {{ like }}</p>
 			</div>
 		</div>
 	</div>
@@ -37,10 +40,14 @@ export default {
 		"time": {required: true},
 		"caption": {required: true},
 		"image": {required: false},
+		"like": {required: true},
 	},
 	methods: {
 		formatDate(date) {
 			return new Date(date).toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
+		},
+		IncreaseLikes: function() {
+			this.$store.commit("IncreaseLikes")
 		}
 	}
 };
@@ -89,6 +96,8 @@ export default {
 	.post-footer > .like-button img {
 		width: 32px;
 		height: 30px;
+		margin: 10px;
+		float: left;
 	}
 }
 </style>

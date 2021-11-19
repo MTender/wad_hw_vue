@@ -10,6 +10,7 @@
 			:time="post.time"
 			:caption="post.caption"
 			:image="post.image"
+			:like="post.like"
 		/>
 	</div>
 </template>

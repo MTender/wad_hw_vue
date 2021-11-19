@@ -15,7 +15,8 @@ export default new Vuex.Store({
                 "date": "2021-09-17",
                 "time": "9:45",
                 "caption": "I think it's going to rain again",
-                "image": require("@/assets/post-images/post1-img.jpg")
+                "image": require("@/assets/post-images/post1-img.jpg"),
+                "like": 0,
             },
             {
                 "id": 2,
@@ -26,7 +27,8 @@ export default new Vuex.Store({
                 },
                 "date": "2021-09-15",
                 "time": "17:43",
-                "caption": "Which weighs more, a pound of feathers or a pound of bricks?"
+                "caption": "Which weighs more, a pound of feathers or a pound of bricks?",
+                "like": 0,
             },
             {
                 "id": 3,
@@ -38,7 +40,8 @@ export default new Vuex.Store({
                 "date": "2021-09-14",
                 "time": "0:00",
                 "caption": "Which weighs more, a pound of feathers or a pound of bricks?",
-                "image": require("@/assets/post-images/post3-img.jpg")
+                "image": require("@/assets/post-images/post3-img.jpg"),
+                "like": 0,
             },
             {
                 "id": 4,
@@ -50,7 +53,8 @@ export default new Vuex.Store({
                 "date": "2021-09-14",
                 "time": "8:30",
                 "caption": "This is a funny-looking dog, don't you think?",
-                "image": require("@/assets/post-images/post4-img.webp")
+                "image": require("@/assets/post-images/post4-img.webp"),
+                "like": 0,
             },
             {
                 "id": 5,
@@ -61,7 +65,8 @@ export default new Vuex.Store({
                 },
                 "date": "2021-09-13",
                 "time": "15:27",
-                "caption": "When dad tells you to buy Enefit Green stock and you go all in. #stonks"
+                "caption": "When dad tells you to buy Enefit Green stock and you go all in. #stonks",
+                "like": 0,
             },
             {
                 "id": 6,
@@ -72,7 +77,8 @@ export default new Vuex.Store({
                 },
                 "date": "2021-09-16",
                 "time": "19:46",
-                "caption": "Anyone up for some anti-union activities?"
+                "caption": "Anyone up for some anti-union activities?",
+                "like": 0,
             },
             {
                 "id": 7,
@@ -84,7 +90,8 @@ export default new Vuex.Store({
                 "date": "2021-09-17",
                 "time": "13:53",
                 "caption": "I really liked the last episode of Notflix's \"Cephalopod game\"",
-                "image": require("@/assets/post-images/post7-img.webp")
+                "image": require("@/assets/post-images/post7-img.webp"),
+                "like": 0,
             },
             {
                 "id": 8,
@@ -96,7 +103,8 @@ export default new Vuex.Store({
                 "date": "2021-09-16",
                 "time": "18:32",
                 "caption": "I think it's time to finally admit it. I love sand.",
-                "image": require("@/assets/post-images/post8-img.jpg")
+                "image": require("@/assets/post-images/post8-img.jpg"),
+                "like": 0,
             },
             {
                 "id": 9,
@@ -107,7 +115,8 @@ export default new Vuex.Store({
                 },
                 "date": "2021-09-15",
                 "time": "15:10",
-                "caption": "I just found out how to actually play the game \"hangman\". Been doing it wrong for years."
+                "caption": "I just found out how to actually play the game \"hangman\". Been doing it wrong for years.",
+                "like": 0,
             },
             {
                 "id": 10,
@@ -119,11 +128,18 @@ export default new Vuex.Store({
                 "date": "2021-09-14",
                 "time": "11:17",
                 "caption": "Cute dog",
-                "image": require("@/assets/post-images/post10-img.jpg")
+                "image": require("@/assets/post-images/post10-img.jpg"),
+                "like": 0,
             }
         ]
     },
-    mutations: {},
+    mutations: {
+        IncreaseLikes: (state) => {
+            state.posts.forEach((post) => {
+                post.like += 1;
+            });
+        }
+    },
     actions: {},
     modules: {},
 });
