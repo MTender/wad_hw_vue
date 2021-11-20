@@ -4,6 +4,7 @@
 		<Post
 			v-for="post in posts"
 			:key="post.id"
+			:id="post.id"
 			:pfp="post.author.pfp"
 			:firstname="post.author.firstname"
 			:lastname="post.author.lastname"

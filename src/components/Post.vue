@@ -20,7 +20,7 @@
 		</div>
 		<div class="post-footer">
 			<div class="like-button">
-				<button v-on:click="IncreaseLikes"><img src="../assets/like.png" alt="like" /></button>
+				<button v-on:click="IncreaseLikes(id)"><img src="../assets/like.png" alt="like" /></button>
 			</div>
 			<div class="like-number">
 				<p>Likes: {{ like }}</p>
@@ -33,6 +33,7 @@
 export default {
 	name: "Home",
 	props: {
+		"id": {required: true},
 		"pfp": {required: true},
 		"firstname": {required: true},
 		"lastname": {required: true},
@@ -46,8 +47,8 @@ export default {
 		formatDate(date) {
 			return new Date(date).toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
 		},
-		IncreaseLikes: function() {
-			this.$store.commit("IncreaseLikes")
+		IncreaseLikes: function(id) {
+			this.$store.commit("IncreaseLikes", id)
 		}
 	}
 };
