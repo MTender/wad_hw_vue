@@ -20,7 +20,7 @@
 		</div>
 		<div class="post-footer">
 			<div class="like-button">
-				<button v-on:click="increaseLikes(id)"><img src="../assets/like.png" alt="like" /></button>
+				<img v-on:click="increaseLikes(id)" src="../assets/like.png" alt="like" />
 			</div>
 			<div class="like-number">
 				<p>Likes: {{ like }}</p>
@@ -48,7 +48,7 @@ export default {
 			return new Date(date).toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
 		},
 		increaseLikes(id) {
-			this.$store.commit("increaseLikes", id)
+			this.$store.dispatch("increaseLikesAction", id);
 		}
 	}
 };
@@ -97,8 +97,6 @@ export default {
 	.post-footer > .like-button img {
 		width: 32px;
 		height: 30px;
-		margin: 10px;
-		float: left;
 	}
 }
 </style>

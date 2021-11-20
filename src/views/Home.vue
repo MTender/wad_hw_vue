@@ -32,7 +32,7 @@ export default {
 	},
 	methods: {
 		resetLikes() {
-			this.$store.commit("resetLikes")
+			this.$store.dispatch("resetLikesAction");
 		}
 	}
 };

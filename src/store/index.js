@@ -143,6 +143,12 @@ export default new Vuex.Store({
             });
         }
     },
-    actions: {},
-    modules: {},
+    actions: {
+        increaseLikesAction: ({ commit }, id) => {
+            commit("increaseLikes", id);
+        },
+        resetLikesAction: ({ commit }) => {
+            commit("resetLikes");
+        }
+    },
 });
