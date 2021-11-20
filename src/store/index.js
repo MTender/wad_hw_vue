@@ -134,10 +134,10 @@ export default new Vuex.Store({
         ]
     },
     mutations: {
-        IncreaseLikes: (state, id) => {
-            state.posts[id-1].like++;
+        increaseLikes: (state, id) => {
+            state.posts[id - 1].like++;
         },
-        ResetLikes: (state) => {
+        resetLikes: (state) => {
             state.posts.forEach((post) => {
                 post.like = 0;
             });

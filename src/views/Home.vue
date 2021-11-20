@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<button v-on:click="ResetLikes">Reset Likes</button>
+		<button v-on:click="resetLikes()">Reset Likes</button>
 		<Post
 			v-for="post in posts"
 			:key="post.id"
@@ -31,8 +31,8 @@ export default {
 		},
 	},
 	methods: {
-		ResetLikes: function() {
-			this.$store.commit("ResetLikes")
+		resetLikes() {
+			this.$store.commit("resetLikes")
 		}
 	}
 };

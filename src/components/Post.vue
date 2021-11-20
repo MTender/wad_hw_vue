@@ -20,7 +20,7 @@
 		</div>
 		<div class="post-footer">
 			<div class="like-button">
-				<button v-on:click="IncreaseLikes(id)"><img src="../assets/like.png" alt="like" /></button>
+				<button v-on:click="increaseLikes(id)"><img src="../assets/like.png" alt="like" /></button>
 			</div>
 			<div class="like-number">
 				<p>Likes: {{ like }}</p>
@@ -47,8 +47,8 @@ export default {
 		formatDate(date) {
 			return new Date(date).toLocaleDateString("en-US", { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })
 		},
-		IncreaseLikes: function(id) {
-			this.$store.commit("IncreaseLikes", id)
+		increaseLikes(id) {
+			this.$store.commit("increaseLikes", id)
 		}
 	}
 };
