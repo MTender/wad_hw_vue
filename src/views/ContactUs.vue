@@ -22,7 +22,6 @@
 
 </script>
 
-
 <style scoped lang="scss">
 h1 {
 	margin-bottom: 100px;
