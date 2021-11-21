@@ -31,7 +31,7 @@
 
 <script>
 export default {
-	name: "Home",
+	name: "Post",
 	props: {
 		"id": {required: true},
 		"pfp": {required: true},

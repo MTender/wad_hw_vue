@@ -21,8 +21,7 @@
 import NavMenu from "@/components/NavMenu.vue";
 
 export default {
-	name: "Header",
-	props: {},
+	name: "Footer",
 	components: {
 		NavMenu,
 	},
